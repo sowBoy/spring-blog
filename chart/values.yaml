@@ -1,0 +1,11 @@
+app:
+  name: app
+  group: app
+  replicaCount: 3
+  container:
+    image: registry.gitlab.com/boubacar.sowboy/java-spring-aws-jenkins-ci-cd:sp-bl.0.0.8
+    port: 8080
+    secretname: secretyo
+  service:
+    type: ClusterIP
+    port: 8080
