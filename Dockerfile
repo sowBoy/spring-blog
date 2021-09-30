@@ -13,4 +13,4 @@ COPY --from=build /home/app/target/spring-blog.jar /home/app/app.jar
 EXPOSE 8080
 WORKDIR /home/app
 VOLUME ["/home/app"]
-ENTRYPOINT ["java","-jar","/home/app/app.jar"]
+ENTRYPOINT ["java","-jar","/home/app/app.jar","--spring.profiles.active=prd"]

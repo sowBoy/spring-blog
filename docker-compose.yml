@@ -7,6 +7,8 @@ services:
     ports:
       - 8080:8080
     restart: always
+    links:
+      - mongo
   mongo:
     container_name: mongo_spring
     image: mongo
@@ -14,3 +16,4 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: passroot
+      MONGO_INITDB_DATABASE: mongoBlog
